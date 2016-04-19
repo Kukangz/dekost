@@ -31,18 +31,7 @@ public class SplashScreen extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
 
-
         new GetParameter().execute();
-
-        AuthLibrary auth = new AuthLibrary(SplashScreen.this);
-        if (!auth.checkLogin()) {
-            Intent intent = new Intent(SplashScreen.this, Login.class);
-            startActivity(intent);
-        } else {
-            Intent intent = new Intent(SplashScreen.this, MainMenu.class);
-            startActivity(intent);
-        }
-
     }
 
     private class GetParameter extends AsyncTask<String, String, JSONArray> {
@@ -56,16 +45,16 @@ public class SplashScreen extends Activity {
         protected JSONArray doInBackground(String... args) {
 
             JSONParser jParser = new JSONParser();
-            String uri = "";
 
             // Getting JSON from URL
-            JSONArray json;
+            JSONArray json_country;
 
-            json = jParser.getJSONFromUrl(AppController.COUNTRY_URL);
+            json_country = jParser.getJSONFromUrl(AppController.COUNTRY_URL);
 
-            AppController.getInstance().setCountry(json);
+            AppController.getInstance().setCountry(json_country);
 
-            json = jParser.getJSONFromUrl(AppController.FACILITY_URL);
+
+            JSONArray json = jParser.getJSONFromUrl(AppController.FACILITY_URL);
 
             List<KeyPairBoolData> rules_adapter = new ArrayList<KeyPairBoolData>(), facility_adapter = new ArrayList<KeyPairBoolData>();
 
@@ -129,6 +118,14 @@ public class SplashScreen extends Activity {
         @Override
         protected void onPostExecute(JSONArray json) {
             super.onPostExecute(json);
+            AuthLibrary auth = new AuthLibrary(SplashScreen.this);
+            if (!auth.checkLogin()) {
+                Intent intent = new Intent(SplashScreen.this, Login.class);
+                startActivity(intent);
+            } else {
+                Intent intent = new Intent(SplashScreen.this, MainMenu.class);
+                startActivity(intent);
+            }
         }
     }
 }

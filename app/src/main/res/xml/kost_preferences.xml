@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Toggle Search Result">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="status_looking"
+            android:summary="If selected, this option will allow some member to discover this kost on their search result"
+            android:title="Toggle Look for Member" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="status_searchable"
+            android:summary="If selected, this option will allow this kost to visible to all searcher "
+            android:title="Toggle Searchable" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Settings">
+        <EditTextPreference
+            android:key="name"
+            android:summary="Kost"
+            android:title="Name"></EditTextPreference>
+        <EditTextPreference
+            android:key="address"
+            android:summary="Address"
+            android:title="Address"></EditTextPreference>
+        <EditTextPreference
+            android:key="address_other"
+            android:summary="Address Other"
+            android:title="Additional Address"></EditTextPreference>
+        <EditTextPreference
+            android:key="price"
+            android:summary="Kost Default Price"
+            android:title="Price"></EditTextPreference>
+        <ListPreference
+            android:entries="@array/resident_array"
+            android:entryValues="@array/resident_array_value"
+            android:key="resident_type"
+            android:summary="Man"
+            android:title="Resident" />
+        <ListPreference
+            android:entries="@array/resident_array"
+            android:entryValues="@array/resident_array_value"
+            android:key="resident_type"
+            android:summary="Daily"
+            android:title="Type" />
+        <MultiSelectListPreference
+            android:defaultValue="@array/empty_array"
+            android:entries="@array/listArray"
+            android:entryValues="@array/listValues"
+            android:key="facility"
+            android:summary="List of Facility which applied for member search and other purpose"
+            android:title="Facility" />
+        <MultiSelectListPreference
+            android:defaultValue="@array/empty_array"
+            android:entries="@array/listArray"
+            android:entryValues="@array/listValues"
+            android:key="rules"
+            android:summary="List of Rule which applied for member search and other purpose"
+            android:title="Rules" />
+        <Preference
+            android:key="location"
+            android:summary="-1.7218739217391, 1.812376127398172"
+            android:title="Location"></Preference>
+
+        <Preference
+            android:key="image"
+            android:summary=""
+            android:title="Display Image">
+
+
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>

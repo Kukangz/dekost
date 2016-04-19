@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "wawa.skripsi.dekost"
+        minSdkVersion 17
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.mcxiaoke.volley:library:1.0.19'
+    compile 'com.github.coyarzun89:FabTransitionActivity:b9c6547738'
+    compile 'com.jakewharton:butterknife:6.1.0'
+    compile ('com.github.ganfra:material-spinner:1.1.1'){
+        exclude group: 'com.nineoldandroids', module: 'library'
+        exclude group: 'com.android.support', module: 'appcompat-v7'
+    }
+    compile 'com.loopj.android:android-async-http:1.4.9'
+    compile 'com.github.rahatarmanahmed:circularprogressview:2.4.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+    compile 'com.github.satyan:sugar:1.4'
+    compile 'com.google.android.gms:play-services-maps:8.4.0'
+    compile 'com.google.android.gms:play-services-location:8.4.0'
+    compile 'com.google.maps.android:android-maps-utils:0.4+'
+    compile 'com.koushikdutta.async:androidasync:2.+'
+    compile ('io.nlopez.smartlocation:library:3.2.0'){
+        transitive = false
+    }
+    compile 'com.ragnarok.rxcamera:lib:0.0.2'
+    compile 'com.github.jkwiecien:EasyImage:1.1.3'
+}

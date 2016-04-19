@@ -48,6 +48,7 @@ public class AppController extends SugarApp {
 
     public static String IMAGE_URL = "kukang.bahasbuku.com/image/";
 
+    public static String VERSION_URL = "http://kukang.bahasbuku.com/v1/version";
     public static String RULES_URL = "http://kukang.bahasbuku.com/v1/rules";
     public static String COUNTRY_URL = "http://kukang.bahasbuku.com/v1/country";
     public static String FACILITY_URL = "http://kukang.bahasbuku.com/v1/facility";

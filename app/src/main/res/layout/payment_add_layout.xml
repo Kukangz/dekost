@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/orange"
+            android:id="@+id/toolbar"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:title="Add Payment" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="25dp">
+        <!--  Name Label -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <EditText android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:hint="Name" />
+        </android.support.design.widget.TextInputLayout>
+
+        <fr.ganfra.materialspinner.MaterialSpinner
+            android:id="@+id/spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:ms_multiline="false"
+            app:ms_hint="Payment / Expenses"
+            app:ms_enableFloatingLabel="true"
+            app:ms_enableErrorLabel="true"
+            app:ms_floatingLabelText="Payment Type"
+            app:ms_baseColor="@color/base"
+            app:ms_highlightColor="@color/highlight"
+            app:ms_errorColor="@color/error"
+            app:ms_thickness="0.5dp"
+            app:ms_hintColor="@color/hint"
+            app:ms_arrowColor="@color/arrow"
+            app:ms_arrowSize="16dp"
+            app:ms_alignLabels="false"
+            app:ms_floatingLabelColor="@color/floating_label"/>
+
+            <fr.ganfra.materialspinner.MaterialSpinner
+                android:id="@+id/spinner_member"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:ms_multiline="false"
+                app:ms_hint="Member"
+                app:ms_enableFloatingLabel="true"
+                app:ms_enableErrorLabel="true"
+                app:ms_floatingLabelText="Member"
+                app:ms_baseColor="@color/base"
+                app:ms_highlightColor="@color/highlight"
+                app:ms_errorColor="@color/error"
+                app:ms_thickness="0.5dp"
+                app:ms_hintColor="@color/hint"
+                app:ms_arrowColor="@color/arrow"
+                app:ms_arrowSize="16dp"
+                app:ms_alignLabels="false"
+                app:ms_floatingLabelColor="@color/floating_label"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <EditText android:id="@+id/amount"
+                android:inputType="numberDecimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Amount" />
+        </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+                <EditText android:id="@+id/payment_date"
+                    android:inputType="date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Payment Date"
+                    android:focusable="false"/>
+            </android.support.design.widget.TextInputLayout>
+
+        <!-- Signup Button -->
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/payment_add"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:padding="12dp"
+            android:text="Save Payment"/>
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:id="@+id/base">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:animateLayoutChanges="true">
+    <LinearLayout
+        android:background="@color/orange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingBottom="25dp"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_marginTop="50dp"
+            android:id="@+id/search_nearby"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/search_nearby_icon"
+            app:civ_border_width="5dp"
+            app:civ_border_color="#ffffff" />
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search Nearby"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="24dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/advanced_search_button"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="Advanced Search \n ▼"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:animateLayoutChanges="true"
+            android:background="@drawable/advanced_search_down_arrow"/>
+    </LinearLayout>
+    <LinearLayout
+        android:animateLayoutChanges="true"
+        android:id="@+id/android_search_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:visibility="gone">
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/keyword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search Keyword"
+            android:textAlignment="center"
+            android:textSize="14dp"/>
+        <LinearLayout
+            android:animateLayoutChanges="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/price_start"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:hint="Price Start"
+                android:textAlignment="center"
+                android:textSize="14dp"
+                android:inputType="numberDecimal"/>
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/price_end"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:hint="Price End"
+                android:textAlignment="center"
+                android:textSize="14dp"
+                android:inputType="numberDecimal"/>
+        </LinearLayout>
+        <TextView
+
+            android:background="@drawable/gradient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resident"
+            android:textAlignment="center"/>
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/resident"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="30dp">
+
+        </android.support.v7.widget.AppCompatSpinner>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Type"
+            android:background="@drawable/gradient"
+            android:textAlignment="center"/>
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="30dp">
+        </android.support.v7.widget.AppCompatSpinner>
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="Filter Facility"
+            android:id="@+id/filter_facility">
+        </android.support.v7.widget.AppCompatCheckBox>
+
+        <wawa.skripsi.dekost.library.MultiSpinnerSearch
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/facility_spinner"
+            android:visibility="gone"></wawa.skripsi.dekost.library.MultiSpinnerSearch>
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="Filter Rules"
+            android:id="@+id/filter_rules">
+        </android.support.v7.widget.AppCompatCheckBox>
+
+        <wawa.skripsi.dekost.library.MultiSpinnerSearch
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rules_spinner"
+            android:visibility="gone"></wawa.skripsi.dekost.library.MultiSpinnerSearch>
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="Search Area"
+            android:id="@+id/search_area_button">
+
+        </android.support.v7.widget.AppCompatCheckBox>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_area"
+            android:visibility="gone"
+            android:animateLayoutChanges="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/country_container">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Country"
+                android:textAlignment="center"
+                android:background="@drawable/gradient"/>
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="30dp">
+            </android.support.v7.widget.AppCompatSpinner>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/province_container">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Province"
+                android:textAlignment="center"
+                android:background="@drawable/gradient"/>
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/province"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="30dp">
+            </android.support.v7.widget.AppCompatSpinner>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/city_container">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="City"
+                android:textAlignment="center"
+                android:background="@drawable/gradient"/>
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="30dp">
+            </android.support.v7.widget.AppCompatSpinner>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/district_container">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="District"
+                android:textAlignment="center"
+                android:background="@drawable/gradient"/>
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/district"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="30dp">
+            </android.support.v7.widget.AppCompatSpinner>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/region_container">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Region"
+                android:textAlignment="center"
+                android:background="@drawable/gradient"/>
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/region"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="30dp">
+            </android.support.v7.widget.AppCompatSpinner>
+            </LinearLayout>
+
+
+        </android.support.design.widget.TextInputLayout>
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Advanced Search"
+            android:id="@+id/advanced_search_start"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

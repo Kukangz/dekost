@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Settings">
+
+        <CheckBoxPreference android:title="Toggle Enabled"
+            android:defaultValue="false"
+            android:summary="If selected, this option will allow some member to discover this kost on their search result"
+            android:key="applicationUpdates" />
+        <EditTextPreference android:title="Name"
+            android:key="username"
+            android:summary="Kost"/>
+        <EditTextPreference android:title="Capacity"
+            android:key="capacity"
+            android:inputType="numberDecimal"
+            android:summary="capacity"/>
+        <EditTextPreference android:title="Size"
+            android:key="size"
+            android:inputType="text"
+            android:summary="size"/>
+        <EditTextPreference android:title="Price"
+            android:key="price"
+            android:inputType="numberDecimal"
+            android:summary="price"/>
+        <ListPreference
+            android:title="Bathroom"
+            android:summary="Inside"
+            android:key="Bathroom"
+            android:defaultValue="1"
+            android:entries="@array/listArray"
+            android:entryValues="@array/listValues" />
+
+        <EditTextPreference android:title="Additional Information"
+            android:key="additional"
+            android:inputType="textMultiLine"
+            android:summary="@string/lorem_short"/>
+    </PreferenceCategory>
+</PreferenceScreen>

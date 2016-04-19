@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.github.rahatarmanahmed.cpv.CircularProgressView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/progress_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        app:cpv_color="@color/orange"
+        app:cpv_animAutostart="true"
+        app:cpv_indeterminate="true" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_menu_refresh"
+        app:backgroundTint="@color/white"
+        app:borderWidth="0dp"
+        app:fabSize="normal"
+        app:rippleColor="@color/white"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/empty_result"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="Data is empty"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/orange"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:visibility="invisible">
+    </TextView>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/list_divider"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/list_row_selector" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_add_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/ic_book_white_24dp"
+        app:backgroundTint="@color/orange"
+        app:borderWidth="0dp"
+        app:fabSize="normal"
+        app:rippleColor="@color/orange"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_above="@+id/fab_add_type"
+        android:layout_alignLeft="@+id/fab_add_type"
+        android:layout_alignRight="@+id/fab_add_type"
+        android:src="@drawable/ic_add_white_18dp"
+        app:backgroundTint="@color/orange"
+        app:borderWidth="0dp"
+        app:fabSize="normal"
+        app:rippleColor="@color/orange"/>
+
+    <com.github.fabtransitionactivity.SheetLayout
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        app:ft_container_gravity="center"
+        app:ft_color="@color/orange"
+        android:elevation="2dp"/>
+
+</RelativeLayout>

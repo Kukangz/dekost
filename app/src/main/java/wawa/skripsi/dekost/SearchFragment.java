@@ -187,11 +187,6 @@ public class SearchFragment extends Fragment {
             country_adapter.notifyDataSetChanged();
         }
 
-
-
-
-
-
         /*
         Province
          */

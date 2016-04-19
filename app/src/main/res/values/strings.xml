@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Dekost</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign In</string>
+    <string name="action_register">Register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="lorem">Lorem ipsum dolor sit amet, auctor ut justo a est tortor libero. Donec pretium ultricies in, non semper, at proin dui. Faucibus eleifend velit, velit non pulvinar eros suscipit urna mi, tempus pede nostra, amet montes sollicitudin, in urna etiam ac leo mi elementum. Hendrerit nec, imperdiet libero commodo pellentesque lacus nec, tempora nibh viverra per non, nisl tempor. Nibh natoque arcu id, viverra duis dui libero lorem commodo elit, volutpat vitae feugiat mauris, mauris sed. Integer vel vivamus wisi ullamcorper congue. Nisl nibh nulla sit, mattis est sed odio lacus maecenas. Vehicula ut, et sodales nulla, facilisi bibendum sit vitae, lorem magna doloremque, vestibulum donec vestibulum. Cras varius consequat nam dolor varius, iaculis id tempor et eros diam, luctus aliquam platea erat, sed velit consequat lectus convallis aliquet et. Quam vel ridiculus diam, mus urna non ut posuere, amet exercitationem ligula faucibus non lorem. Interdum urna integer wisi justo suspendisse, risus ut euismod feugiat lacus, magna vivamus corrupti ligula mauris nec.
+Dui justo cum blandit eaque quam. Sollicitudin wisi amet, venenatis leo fringilla, volutpat euismod posuere quis. Nulla ipsum neque nec malesuada metus, donec wisi nibh elit ultrices, facilisis pulvinar, faucibus ante veniam non pellentesque, maecenas id sodales aliquam. Justo sapien vestibulum ipsum, non rutrum amet elit ut magnis ultricies. Fusce turpis. Sapien a nec nec, nam fusce porttitor nullam tellus, vel et sodales sit, ultrices ut. Tellus id id turpis vel, phasellus condimentum lacinia mi ultricies ligula. Iaculis aliquam molestie augue cras, lectus pretium arcu egestas vestibulum mollis.
+Diam diam pede sit gravida massa cras, mattis est, rerum viverra nulla ante amet feugiat adipiscing, morbi sit eros mauris mattis nec, dolor in turpis donec. Luctus justo nulla id eget, at libero nunc turpis, vel id sem orci, libero mollis vulputate dolor, nullam purus maecenas elit dictum. Habitasse parturient nonummy sed, et nec, urna amet, ac vestibulum risus, et eros justo mauris aliquam diam. Facilisi vitae fames lorem sit tristique vitae. Vestibulum eu, dui et. Volutpat ut litora in venenatis dignissim turpis. Eget turpis volutpat, posuere turpis nec vitae fames ut, suscipit aliquet. Nisl pellentesque pede vitae ultricies nec accumsan, dolor vitae euismod non reiciendis laoreet sollicitudin, mi urna nunc id dictumst. Vulputate non in et, et malesuada augue diam scelerisque nunc urna, aliquam morbi ipsum odio, urna tincidunt voluptas convallis.
+In lacinia aliquam. Maecenas eget quis neque ipsum justo ullamcorper, eget vehicula lorem tristique ante vestibulum leo, ipsum mi. Luctus ipsum vitae ac in, mauris amet et vitae sagittis, aenean bibendum elit, neque imperdiet sit quisque sociis. Hendrerit a nibh maecenas eros vitae, massa magna. Consequat eu, lorem eros nec non vivamus nunc, interdum litora sit a mauris, fermentum velit libero nec etiam bibendum. Leo augue nulla tortor pede, lacinia nunc ante vehicula, cras in, pharetra quam eleifend nonummy sit, et pellentesque mauris sed. Magnis risus orci magna feugiat rhoncus, venenatis ultrices proin at tempus, suscipit exercitation. Pede tristique in rhoncus posuere sem aptent. Commodo conubia vulputate wisi eu. Hac odio. Justo nulla eu suscipit, odio gravida eu mollis, duis curabitur morbi.
++</string>
+    <string name="lorem_short">Lorem ipsum dolor sit amet, auctor ut justo a est tortor libero. Donec pretium ultricies in, non semper, at proin dui. Faucibus eleifend velit, velit non pulvinar eros suscipit urna mi, tempus pede nostra, amet montes sollicitudin, in urna etiam ac leo mi elementum. Hendrerit nec, imperdiet libero commodo pellentesque lacus nec, tempora nibh viverra per non, nisl tempor. Nibh natoque arcu id, viverra duis dui libero lorem commodo elit, volutpat vitae feugiat mauris, mauris sed. Integer vel vivamus wisi ullamcorper congue. Nisl nibh nulla sit, mattis est sed odio lacus maecenas. Vehicula ut, et sodales nulla, facilisi bibendum sit vitae, lorem magna doloremque, vestibulum donec vestibulum.</string>
+    <string name="detail_member_information">Member Detail</string>
+    <string name="detail_room_information">Room Detail</string>
+</resources>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="FabTransitionActivity-b9c6547738">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.coyarzun89/FabTransitionActivity/b9c6547738/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.coyarzun89/FabTransitionActivity/b9c6547738/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.coyarzun89/fabtransitionactivity/b9c6547738/77ac2c2d8b000f580e2eba6799da069f3889faa3/FabTransitionActivity-b9c6547738-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
