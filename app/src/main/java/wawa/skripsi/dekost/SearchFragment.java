@@ -4,12 +4,10 @@ package wawa.skripsi.dekost;
  * Created by Admin on 04/01/2016.
  */
 
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.location.LocationManager;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.annotation.Nullable;
@@ -36,7 +34,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -44,7 +41,6 @@ import wawa.skripsi.dekost.library.KeyPairBoolData;
 import wawa.skripsi.dekost.library.MultiSpinnerSearch;
 import wawa.skripsi.dekost.search.SearchResult;
 import wawa.skripsi.dekost.util.CustomSpinnerAdapter;
-import wawa.skripsi.dekost.util.JSONParser;
 
 
 public class SearchFragment extends Fragment {
@@ -167,7 +163,7 @@ public class SearchFragment extends Fragment {
 
         if(!AppController.getInstance().checkCountry()){
             country_adapter.add(Pair.create(0, "Select Country"));
-            new CountryParse().execute(country_url, "country");
+            //new CountryParse().execute(country_url, "country");
         }else{
             country_adapter.add(Pair.create(0, "Select Country"));
             JSONArray json = AppController.getInstance().getCountry();
@@ -223,7 +219,7 @@ public class SearchFragment extends Fragment {
                     clear_province();
                 } else {
                     clear_province();
-                    new CountryParse().execute(province_url, "province", String.valueOf(country_adapter.getItem(position).first));
+                    //new CountryParse().execute(province_url, "province", String.valueOf(country_adapter.getItem(position).first));
                 }
 
                 noticeadapter();
@@ -243,7 +239,7 @@ public class SearchFragment extends Fragment {
                     clear_city();
                 } else {
                     clear_city();
-                    new CountryParse().execute(city_url, "city", String.valueOf(province_adapter.getItem(position).first));
+                    //new CountryParse().execute(city_url, "city", String.valueOf(province_adapter.getItem(position).first));
                 }
 
                 noticeadapter();
@@ -263,7 +259,7 @@ public class SearchFragment extends Fragment {
                     clear_district();
                 } else {
                     clear_district();
-                    new CountryParse().execute(district_url, "district", String.valueOf(city_adapter.getItem(position).first));
+                    //new CountryParse().execute(district_url, "district", String.valueOf(city_adapter.getItem(position).first));
                 }
 
                 noticeadapter();
@@ -283,7 +279,7 @@ public class SearchFragment extends Fragment {
                     clear_region();
                 } else {
                     clear_region();
-                    new CountryParse().execute(district_url, "region", String.valueOf(district_adapter.getItem(position).first));
+                    //new CountryParse().execute(district_url, "region", String.valueOf(district_adapter.getItem(position).first));
                 }
 
 
@@ -573,6 +569,7 @@ public class SearchFragment extends Fragment {
     }
 
 
+    /*
     private class CountryParse extends AsyncTask<String, String, JSONArray> {
         private ProgressDialog pDialog;
 
@@ -696,6 +693,7 @@ public class SearchFragment extends Fragment {
 
             return json;
         }
+        //</editor-fold>
 
         @Override
         protected void onPostExecute(JSONArray json) {
@@ -706,6 +704,7 @@ public class SearchFragment extends Fragment {
 
         }
     }
+    */
 
 
 }

@@ -55,7 +55,6 @@ public class SplashScreen extends Activity {
 
 
             JSONArray json = jParser.getJSONFromUrl(AppController.FACILITY_URL);
-
             List<KeyPairBoolData> rules_adapter = new ArrayList<KeyPairBoolData>(), facility_adapter = new ArrayList<KeyPairBoolData>();
 
             try {
@@ -77,11 +76,12 @@ public class SplashScreen extends Activity {
                     h.setName(jsonobject.getString("name"));
                     h.setSelected(false);
                     facility_adapter.add(h);
+                    Log.e("add facility",jsonobject.getString("name") );
                 }
                 Pair<CharSequence[], CharSequence[]> j = Pair.create(entries.toArray(new CharSequence[entries.size()]), entriesvalue.toArray(new CharSequence[entriesvalue.size()]));
                 AppController.getInstance().setFacility(facility_adapter, j);
             } catch (JSONException e) {
-                e.printStackTrace();
+                Log.e("facility ex", e.toString());
             }
 
             json = jParser.getJSONFromUrl(AppController.RULES_URL);
